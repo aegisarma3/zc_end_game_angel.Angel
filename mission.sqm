@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={898.23297,98.175514,1730.2173};
-		dir[]={0.83294868,-0.52253479,0.18240447};
-		up[]={0.51047969,0.85258108,0.11178799};
-		aside[]={0.21393313,-1.7164712e-007,-0.97690475};
+		pos[]={3077.5171,86.621567,1962.5393};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -79,25 +79,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -143,6 +124,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -10950,13 +10950,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3064.1963,8.284214,2039.0221};
-				angles[]={0.17930321,4.0063868,6.0678277};
+				position[]={3064.1958,8.283926,2039.0219};
+				angles[]={0.17929767,4.0063858,6.0678291};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=482;
 			type="rhs_weapon_crate";
@@ -10989,13 +10990,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3068.6606,7.9313717,2035.6947};
-				angles[]={0.10585333,2.9485464,6.1404133};
+				position[]={3068.6611,7.9319563,2035.6947};
+				angles[]={0.10585422,2.9485416,6.1404176};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=492;
 			type="rhs_spec_weapons_crate";
@@ -11028,13 +11030,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3066.1689,8.285223,2036.6357};
-				angles[]={0.17930321,4.0063868,6.0678277};
+				position[]={3066.1689,8.2847614,2036.6359};
+				angles[]={0.17929767,4.0063858,6.0678291};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=493;
 			type="rhs_launcher_crate";
@@ -11086,19 +11089,40 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3065.9778,7.6004491,2040.5752};
-				angles[]={0.1961932,4.0063868,6.1404138};
+				position[]={3065.978,7.5998669,2040.5756};
+				angles[]={0.19619246,4.0063858,6.1404176};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
+				presence=0.013373825;
 			};
 			id=494;
 			type="rhs_gear_crate";
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_tr8"",""FirstAidKit"",""Medikit"",""MineDetector""],[10,20,5,5]],[[],[]],[[""rhs_tr8_periscope"",""rhs_tr8_periscope_pip"",""rhs_pdu4"",""Binocular"",""ToolKit"",""ItemMap"",""ItemCompass"",""ItemWatch"",""ItemGPS"",""O_UavTerminal""],[10,10,10,5,5,5,5,5,5,5]],[[""rhs_assault_umbts"",""rhs_rpg_empty"",""rhs_sidor""],[4,4,4]]],false]";
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="ace_isMedicalFacility";
 					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
@@ -11117,7 +11141,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item104
@@ -11125,13 +11149,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3066.7922,7.7119231,2038.8999};
-				angles[]={0.10585333,4.0063868,6.1404133};
+				position[]={3066.7925,7.712348,2038.8994};
+				angles[]={0.10585422,4.0063858,6.1404176};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=495;
 			type="rhs_mags_crate";
@@ -11164,13 +11189,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3059.8862,8.439764,2045.1174};
-				angles[]={0.1961932,2.5765772,6.1038823};
+				position[]={3059.8867,8.4402342,2045.1178};
+				angles[]={0.19619246,2.5765772,6.1038876};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=501;
 			type="rhsusf_weapon_crate";
@@ -11203,13 +11229,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3058.9485,8.1275101,2047.5437};
-				angles[]={0.1961932,2.5765772,6.1038823};
+				position[]={3058.9487,8.1280727,2047.5438};
+				angles[]={0.19619246,2.5765772,6.1038876};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=502;
 			type="rhsusf_spec_weapons_crate";
@@ -11242,13 +11269,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3058.2339,7.6911426,2049.9565};
-				angles[]={0.2426241,2.5765772,6.1038818};
+				position[]={3058.2341,7.6906691,2049.9565};
+				angles[]={0.24261822,2.5765772,6.1038876};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=503;
 			type="rhsusf_launcher_crate";
@@ -11300,13 +11328,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3061.4033,8.5153713,2043.3535};
-				angles[]={0.1961932,2.5765772,6.1038823};
+				position[]={3061.4038,8.5158396,2043.3539};
+				angles[]={0.19619246,2.5765772,6.1038876};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=504;
 			type="rhsusf_gear_crate";
@@ -11358,13 +11387,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3062.6587,8.7103958,2041.3793};
-				angles[]={0.29718071,2.5765772,6.0020814};
+				position[]={3062.6587,8.7107067,2041.3788};
+				angles[]={0.29717723,2.5765772,6.0020828};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=505;
 			type="rhsusf_mags_crate";
@@ -11397,13 +11427,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1024.6793,11.047544,1746.0585};
-				angles[]={6.2606897,1.0964384,6.2731848};
+				position[]={1024.6792,11.047595,1746.0586};
+				angles[]={6.2606878,1.0964333,6.2731848};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=506;
 			type="rhs_weapon_crate";
@@ -11436,13 +11467,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1022.4849,11.091672,1747.6516};
-				angles[]={6.2606897,0.40037686,6.2819405};
+				position[]={1022.4846,11.092103,1747.6516};
+				angles[]={6.2606878,0.40037853,6.2819457};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=507;
 			type="rhs_spec_weapons_crate";
@@ -11475,13 +11507,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1023.9807,10.962312,1741.3624};
-				angles[]={6.2656851,2.2908709,6.2619376};
+				position[]={1023.9808,10.962353,1741.3627};
+				angles[]={6.2656798,2.2908669,6.2619443};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=508;
 			type="rhs_launcher_crate";
@@ -11533,19 +11566,39 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1031.8262,10.935686,1737.7892};
-				angles[]={6.2615128,6.1543727,0.044228788};
+				position[]={1031.8259,10.935269,1737.7892};
+				angles[]={6.261508,6.1543798,0.044226643};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=509;
 			type="rhs_gear_crate";
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_tr8"",""FirstAidKit"",""Medikit"",""MineDetector""],[10,20,5,5]],[[],[]],[[""rhs_tr8_periscope"",""rhs_tr8_periscope_pip"",""rhs_pdu4"",""Binocular"",""ToolKit"",""ItemMap"",""ItemCompass"",""ItemWatch"",""ItemGPS"",""O_UavTerminal""],[10,10,10,5,5,5,5,5,5,5]],[[""rhs_assault_umbts"",""rhs_rpg_empty"",""rhs_sidor""],[4,4,4]]],false]";
+						};
+					};
+				};
+				class Attribute1
 				{
 					property="ace_isMedicalFacility";
 					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
@@ -11564,7 +11617,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item114
@@ -11572,13 +11625,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1030.1731,10.90203,1738.2296};
-				angles[]={6.2648859,6.1543727,6.2742419};
+				position[]={1030.1735,10.902513,1738.23};
+				angles[]={6.264894,6.1543798,6.2742491};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=510;
 			type="rhs_mags_crate";
@@ -11611,13 +11665,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1030.5536,11.657033,1745.2119};
-				angles[]={6.2807932,5.9498143,6.2697244};
+				position[]={1030.554,11.656619,1745.2117};
+				angles[]={6.2807941,5.9498096,6.2697287};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=511;
 			type="rhsusf_weapon_crate";
@@ -11650,13 +11705,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1030.6063,11.594481,1741.4249};
-				angles[]={0.011688259,4.7282619,6.2749352};
+				position[]={1030.606,11.59433,1741.4252};
+				angles[]={0.011693706,4.7282538,6.27493};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=512;
 			type="rhsusf_spec_weapons_crate";
@@ -11689,13 +11745,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1030.3986,11.609153,1739.5204};
-				angles[]={6.2648859,4.7046242,6.2742419};
+				position[]={1030.3986,11.609241,1739.5204};
+				angles[]={6.264894,4.7046223,6.2742491};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=513;
 			type="rhsusf_launcher_crate";
@@ -11747,13 +11804,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1030.0265,11.776069,1747.0172};
-				angles[]={6.2359023,5.9498143,0.0087414896};
+				position[]={1030.0266,11.776576,1747.0177};
+				angles[]={6.2359042,5.9498096,0.0087440992};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=514;
 			type="rhsusf_gear_crate";
@@ -11805,13 +11863,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1029.3396,11.821873,1748.8877};
-				angles[]={6.2651453,5.9498143,0.015297464};
+				position[]={1029.3394,11.821954,1748.8877};
+				angles[]={6.2651386,5.9498096,0.015289084};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=515;
 			type="rhsusf_mags_crate";
@@ -11851,6 +11910,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=516;
 			type="rhs_launcher_crate";
@@ -11890,6 +11950,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=518;
 			type="rhs_mags_crate";
@@ -11929,6 +11990,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=520;
 			type="rhsusf_mags_crate";
@@ -11968,6 +12030,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=522;
 			type="rhs_mags_crate";
@@ -12000,13 +12063,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1701.2708,5.4253817,2820.3369};
+				position[]={1701.271,5.4256659,2820.3369};
 				angles[]={6.282033,6.2207723,6.2761688};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=523;
 			type="rhsusf_mags_crate";
@@ -12046,6 +12110,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=524;
 			type="rhs_mags_crate";
@@ -12085,6 +12150,7 @@ class Mission
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=525;
 			type="rhs_weapon_crate";
@@ -12117,13 +12183,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2664.9304,51.79932,2619.5557};
-				angles[]={0.24615461,4.4504323,6.0978384};
+				position[]={2664.9304,51.798985,2619.5557};
+				angles[]={0.24616124,4.4504323,6.0978312};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=528;
 			type="rhsusf_weapon_crate";
@@ -12156,13 +12223,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={2664.6274,51.135624,2622.4233};
-				angles[]={0.24615461,4.4504323,6.0978384};
+				position[]={2664.6274,51.13517,2622.4238};
+				angles[]={0.24616124,4.4504323,6.0978312};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=1;
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=529;
 			type="rhsusf_mags_crate";
@@ -12187,7 +12255,26 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				class Attribute1
+				{
+					property="enableSimulation";
+					expression="if !(is3DEN) then {_this enablesimulation _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item129
@@ -13515,30 +13602,78 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3064.4143,7.3751497,2042.426};
-				angles[]={0.1961932,0,6.1404138};
+				position[]={3064.4138,7.3753276,2042.4259};
+				angles[]={0.19619246,0,6.1404176};
 			};
 			side="Empty";
 			class Attributes
 			{
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=558;
 			type="ACE_medicalSupplyCrate";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item155
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1025.6505,10.772079,1744.3215};
-				angles[]={6.2606897,0,6.2731848};
+				position[]={1025.651,10.772078,1744.3218};
+				angles[]={6.2606878,0,6.2731848};
 			};
 			side="Empty";
 			class Attributes
 			{
+				init="clearWeaponCargoGlobal this; clearMagazineCargoGlobal this; clearItemCargoGlobal this; clearBackpackCargoGlobal this; this setVariable [""BIS_hvt_keepSimulationEnabled"", true]; this allowDamage false;";
 			};
 			id=559;
 			type="ACE_medicalSupplyCrate";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item156
 		{
