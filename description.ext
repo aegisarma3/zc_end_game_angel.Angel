@@ -2,11 +2,11 @@
 respawn = 3;
 respawnDelay = 5;
 respawnVehicleDelay = 0;
-respawnTemplates[] = {"Revive", "MenuPosition"}; // Enable Revive and Respawn Menu
+respawnTemplates[] = {"MenuPosition","Tickets","Counter"}; // Enable Revive and Respawn Menu
 respawnOnStart = -1;
 respawnDialog = 1;
-reviveForceRespawnDelay = 5;
-reviveBleedOutDelay = 450;
+//reviveForceRespawnDelay = 5;
+//reviveBleedOutDelay = 450;
 disabledAI = 1;
 
 class CfgTaskEnhancements

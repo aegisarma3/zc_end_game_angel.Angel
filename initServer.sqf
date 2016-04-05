@@ -3,8 +3,8 @@
 enableSaving [false, false];
 EnableEnvironment False;
 
-[east, 50] call BIS_fnc_respawnTickets;
-[west, 50] call BIS_fnc_respawnTickets;
+[east, 40] call BIS_fnc_respawnTickets;
+[west, 40] call BIS_fnc_respawnTickets;
 
 
 
@@ -236,4 +236,4 @@ BIS_east03_reward = false;
 } forEach [BIS_east_holder_1, BIS_east_holder_2];
 
 // Fog
-0 setFog [0.5, 0.05, 0];
+//0 setFog [0.5, 0.05, 0];
