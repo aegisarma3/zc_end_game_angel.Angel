@@ -31,7 +31,7 @@ _this addGoggles "rhs_googles_orange";
 comment "Add weapons";
 _this addWeapon "rhs_weap_m14ebrri";
 _this addPrimaryWeaponItem "acc_pointer_IR";
-_this addPrimaryWeaponItem "optic_MRCO";
+_this addPrimaryWeaponItem "rhsusf_acc_ACOG2_USMC";
 _this addPrimaryWeaponItem "bipod_01_F_blk";
 _this addWeapon "rhsusf_weap_m9";
 
