@@ -3,7 +3,7 @@ scriptName "BLUFOR_MG";
 if (!hasInterface) exitWith { ["Loadout running on dedicated server - %1", "BLUFOR_MG"] call BIS_fnc_logFormat; };
 waitUntil { time > 0 };
 waitUntil { !isNull player };
-if (!local _this) exitWith { ["Loadout where unit is not local - %1 / %2", "BLUFOR_MG", __this] call BIS_fnc_logFormat; };
+if (!local _this) exitWith { ["Loadout where unit is not local - %1 / %2", "BLUFOR_MG", _this] call BIS_fnc_logFormat; };
 _this setVariable ["BIS_hvt_loadoutType", "MG"];
 
 comment "Remove existing items";

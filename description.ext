@@ -1,4 +1,4 @@
-#include "aegis_ace_settings.hpp"
+#include "zc_end_game_ace_settings.hpp"
 respawn = 3;
 respawnDelay = 5;
 respawnVehicleDelay = 0;

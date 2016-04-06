@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=656;
+		nextID=686;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={2648.4756,201.99841,2287.2698};
-		dir[]={0.68532884,-0.51573145,-0.51424634};
-		up[]={0.41265032,0.85663903,-0.30963832};
-		aside[]={-0.60022408,-6.7387009e-007,-0.79990715};
+		pos[]={2664.4258,351.17001,1775.2904};
+		dir[]={0.88856369,-0.25958529,0.37830615};
+		up[]={0.2388524,0.96571457,0.10169102};
+		aside[]={0.39173386,1.391345e-008,-0.92010611};
 	};
 };
 binarizationWanted=0;
@@ -54,7 +54,13 @@ addons[]=
 	"ace_medical",
 	"A3_Supplies_F_Heli_CargoNets",
 	"A3_Soft_F_Truck",
-	"A3_Soft_F_Bootcamp_Offroad_01"
+	"A3_Soft_F_Bootcamp_Offroad_01",
+	"A3_Structures_F_Mil_Helipads",
+	"A3_Air_F_Heli_Heli_Transport_03",
+	"A3_Air_F_Heli_Heli_Transport_04",
+	"rhsusf_c_hmmwv",
+	"rhsusf_vehicles",
+	"lop_faction_ia"
 };
 randomSeed=8947204;
 class ScenarioData
@@ -80,25 +86,6 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -145,6 +132,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -199,7 +205,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=168;
+		items=178;
 		class Item0
 		{
 			dataType="Marker";
@@ -417,8 +423,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1073.2466,16.15988,1751.8785};
-				angles[]={6.2132993,0.83419704,0.09471602};
+				position[]={1092.9288,17.030903,1738.6605};
+				angles[]={6.2656851,0.83419704,0.11449757};
 			};
 			side="Empty";
 			class Attributes
@@ -434,8 +440,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1081.1053,16.276878,1743.5737};
-				angles[]={6.2656851,0.83419704,0.038730852};
+				position[]={1106.2172,19.439892,1745.7729};
+				angles[]={6.2806721,0.83419704,0.051205322};
 			};
 			side="Empty";
 			class Attributes
@@ -984,15 +990,15 @@ class Mission
 									};
 									class Item1
 									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=2;
-										ammoLeft=30;
-									};
-									class Item2
-									{
 										name="rhsusf_mag_15Rnd_9x19_JHP";
 										count=1;
 										ammoLeft=15;
+									};
+									class Item2
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=1;
+										ammoLeft=30;
 									};
 								};
 								class ItemCargo
@@ -1024,15 +1030,15 @@ class Mission
 									items=2;
 									class Item0
 									{
-										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
-										count=1;
-										ammoLeft=30;
-									};
-									class Item1
-									{
 										name="rhsusf_mag_15Rnd_9x19_JHP";
 										count=3;
 										ammoLeft=15;
+									};
+									class Item1
+									{
+										name="rhs_mag_30Rnd_556x45_Mk318_Stanag";
+										count=2;
+										ammoLeft=30;
 									};
 								};
 							};
@@ -14303,7 +14309,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1680.6493,8.8064756,2782.4377};
+						position[]={1680.6493,8.8064747,2782.4377};
 						angles[]={0,4.891006,0};
 					};
 					side="Independent";
@@ -14881,16 +14887,520 @@ class Mission
 			};
 			id=646;
 		};
+		class Item168
+		{
+			dataType="Trigger";
+			position[]={4050.6494,109.82157,1447.2487};
+			angle=-1.712694;
+			class Attributes
+			{
+				condition="([""GetStageSide"", [WEST]] call BIS_fnc_moduleHvtObjectivesInstance) == 1";
+				sizeA=10;
+				sizeB=10;
+				interuptable=1;
+				type="SWITCH";
+				isRectangle=1;
+			};
+			id=657;
+			type="EmptyDetector";
+		};
+		class Item169
+		{
+			dataType="Trigger";
+			position[]={90.106689,127.33026,2741.2705};
+			angle=0.0307601;
+			class Attributes
+			{
+				condition="([""GetStageSide"", [EAST]] call BIS_fnc_moduleHvtObjectivesInstance) == 1";
+				sizeA=10;
+				sizeB=10;
+				interuptable=1;
+				type="SWITCH";
+				isRectangle=1;
+			};
+			id=658;
+			type="EmptyDetector";
+		};
+		class Item170
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3080.2388,4.7186832,2101.0959};
+				angles[]={0.006309995,4.5697417,6.2628908};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.40000001;
+			};
+			id=659;
+			type="Land_HelipadSquare_F";
+		};
+		class Item171
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1069.1713,14.1555,1750.903};
+				angles[]={0,0.030760102,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=1;
+			};
+			id=662;
+			type="Land_HelipadEmpty_F";
+		};
+		class Item172
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=6;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4068.603,148.48569,1432.2308};
+						angles[]={0,0.32271138,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						name="BIS_HuronD_1";
+					};
+					id=664;
+					type="B_Helipilot_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4068.603,148.48569,1432.2308};
+						angles[]={0,0.32271138,0};
+					};
+					side="West";
+					class Attributes
+					{
+					};
+					id=665;
+					type="B_Helipilot_F";
+				};
+				class Item2
+				{
+					dataType="Waypoint";
+					position[]={4064.3838,107.57484,1449.2048};
+					synchronizations[]={123};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					syncId=109;
+					id=666;
+					type="Move";
+				};
+				class Item3
+				{
+					dataType="Waypoint";
+					position[]={3608.7954,25.391857,1713.8618};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=667;
+					type="Move";
+				};
+				class Item4
+				{
+					dataType="Waypoint";
+					position[]={3078.8625,4.7572017,2100.5989};
+					type="Unhook";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=668;
+				};
+				class Item5
+				{
+					dataType="Waypoint";
+					position[]={3765.7993,-13.735906,2619.2915};
+					expActiv="deleteVehicle BIS_Huron; {deleteVehicle _x} forEach (units BIS_grpHuron)";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=669;
+					type="Move";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=2;
+				};
+				class Links
+				{
+					items=2;
+					class Item0
+					{
+						linkID=0;
+						item0=664;
+						item1=670;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=665;
+						item1=670;
+						class CustomData
+						{
+							role=2;
+						};
+					};
+				};
+			};
+			id=663;
+		};
+		class Item173
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4068.603,151.54712,1432.1002};
+				angles[]={0,0.32271138,0};
+			};
+			side="West";
+			flags=2;
+			class Attributes
+			{
+				skill=1;
+				init="BIS_grpHuron = group this; this setCaptive true; this setCombatMode ""Blue""; this allowFleeing 0; BIS_grpHuron setBehaviour ""Careless""; {_x disableAI ""target""; _x disableAI ""autotarget""} forEach (units group this); (driver this) setSkill [""Courage"",1]; (driver this) setSkill [""General"",1]; ";
+				name="BIS_Huron";
+			};
+			id=670;
+			type="B_Heli_Transport_03_unarmed_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[],[]],[[""ToolKit""],[1]],[[""B_Parachute""],[20]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item174
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=7;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={103.7908,176.01349,2755.6941};
+						angles[]={0,4.1015587,0};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						name="BIS_TaruD_1";
+					};
+					id=672;
+					type="O_helipilot_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={103.7908,176.01349,2755.6941};
+						angles[]={0,4.1015587,0};
+					};
+					side="East";
+					class Attributes
+					{
+						name="BIS_TaruG_1";
+					};
+					id=673;
+					type="O_helipilot_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={103.7908,176.01349,2755.6941};
+						angles[]={0,4.1015587,0};
+					};
+					side="East";
+					class Attributes
+					{
+					};
+					id=674;
+					type="O_helicrew_F";
+				};
+				class Item3
+				{
+					dataType="Waypoint";
+					position[]={104.10504,125.68002,2740.7754};
+					synchronizations[]={124};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					syncId=110;
+					id=675;
+					type="Move";
+				};
+				class Item4
+				{
+					dataType="Waypoint";
+					position[]={901.57135,171.69456,2281.1038};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=676;
+					type="Move";
+				};
+				class Item5
+				{
+					dataType="Waypoint";
+					position[]={1069.9374,14.258204,1750.4642};
+					type="Unhook";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=677;
+				};
+				class Item6
+				{
+					dataType="Waypoint";
+					position[]={69.526566,148.27213,1279.4495};
+					expActiv="deleteVehicle BIS_Taru; {deleteVehicle _x} forEach (units BIS_grpTaru)";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=678;
+					type="Move";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=3;
+				};
+				class Links
+				{
+					items=3;
+					class Item0
+					{
+						linkID=0;
+						item0=672;
+						item1=679;
+						class CustomData
+						{
+							role=1;
+						};
+					};
+					class Item1
+					{
+						linkID=1;
+						item0=673;
+						item1=679;
+						class CustomData
+						{
+							role=2;
+						};
+					};
+					class Item2
+					{
+						linkID=2;
+						item0=674;
+						item1=679;
+						class CustomData
+						{
+							role=2;
+						};
+					};
+				};
+			};
+			id=671;
+		};
+		class Item175
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={104.10037,179.03229,2755.6094};
+				angles[]={0,4.1015587,0};
+			};
+			side="East";
+			flags=2;
+			class Attributes
+			{
+				skill=1;
+				init="BIS_grpTaru = group this; this setCaptive true; this setCombatMode ""Blue""; this allowFleeing 0; BIS_grpTaru setBehaviour ""Careless""; {_x disableAI ""target""; _x disableAI ""autotarget""} forEach (units group this); (driver this) setSkill [""Courage"",1]; (driver this) setSkill [""General"",1]; ";
+				name="BIS_Taru";
+			};
+			id=679;
+			type="O_Heli_Transport_04_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit"",""Medikit""],[5,1]],[[],[]],[[""ToolKit""],[1]],[[""B_Parachute""],[3]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item176
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={116.9772,125.60854,2754.6331};
+				angles[]={0,3.1723452,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=1;
+				init="null = BIS_Taru setSlingLoad BIS_Ifrit;  ";
+				name="BIS_Ifrit";
+			};
+			id=682;
+			type="rhsusf_m998_w_4dr";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""arifle_Katiba_F"",""FirstAidKit""],[2,10]],[[""30Rnd_65x39_caseless_green"",""150Rnd_762x54_Box"",""HandGrenade"",""SmokeShell"",""SmokeShellRed"",""SmokeShellYellow"",""SmokeShellOrange"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""16Rnd_9x21_Mag"",""RPG32_F""],[16,4,10,4,4,4,4,10,4,4,4,4,12,2]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item177
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4075.2363,100.01336,1436.0885};
+				angles[]={0,6.1412897,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=1;
+				init="nulll = BIS_Huron setSlingLoad BIS_Hunter;";
+				name="BIS_Hunter";
+			};
+			id=684;
+			type="LOP_IA_M998_D_4DR";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""arifle_MX_F"",""FirstAidKit""],[2,10]],[[""30Rnd_65x39_caseless_mag"",""100Rnd_65x39_caseless_mag"",""HandGrenade"",""1Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokeBlue_Grenade_shell"",""16Rnd_9x21_Mag"",""SmokeShell"",""SmokeShellGreen"",""SmokeShellOrange"",""SmokeShellBlue""],[16,6,10,10,4,4,4,4,12,4,4,4,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=28;
+			nextID=30;
 		};
 		class Links
 		{
-			items=28;
+			items=30;
 			class Item0
 			{
 				linkID=0;
@@ -15169,6 +15679,26 @@ class Mission
 				class CustomData
 				{
 					type="Sync";
+				};
+			};
+			class Item28
+			{
+				linkID=28;
+				item0=666;
+				item1=657;
+				class CustomData
+				{
+					type="WaypointActivation";
+				};
+			};
+			class Item29
+			{
+				linkID=29;
+				item0=675;
+				item1=658;
+				class CustomData
+				{
+					type="WaypointActivation";
 				};
 			};
 		};

@@ -3,7 +3,7 @@ scriptName "OPFOR_AT";
 if (!hasInterface) exitWith { ["Loadout running on dedicated server - %1", "OPFOR_AT"] call BIS_fnc_logFormat; };
 waitUntil { time > 0 };
 waitUntil { !isNull player };
-if (!local _this) exitWith { ["Loadout where unit is not local - %1 / %2", "OPFOR_AT", __this] call BIS_fnc_logFormat; };
+if (!local _this) exitWith { ["Loadout where unit is not local - %1 / %2", "OPFOR_AT", _this] call BIS_fnc_logFormat; };
 _this setVariable ["BIS_hvt_loadoutType", "AT"];
 
 comment "Remove existing items";

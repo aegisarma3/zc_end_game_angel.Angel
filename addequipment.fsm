@@ -1,13 +1,13 @@
-/*%FSM<COMPILE "C:\bis\fsmeditor\scriptedFSM.cfg, AddEquipment">*/
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, AddEquipment">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"Start",0,4346,-40.000000,-130.000000,50.000000,-80.000000,0.000000,"Start"};
+item0[] = {"Start",0,250,-40.000000,-130.000000,50.000000,-80.000000,0.000000,"Start"};
 item1[] = {"",7,210,1.000002,-39.000004,8.999998,-30.999992,0.000000,""};
 item2[] = {"West__03",4,218,-150.000000,10.000000,-60.000000,60.000000,0.000000,"West" \n "#03"};
 item3[] = {"West__02",4,218,-260.000000,10.000000,-170.000000,60.000000,0.000000,"West" \n "#02"};
 item4[] = {"West__01",4,218,-370.000000,10.000000,-280.000000,60.000000,0.000000,"West" \n "#01"};
 item5[] = {"East__02",4,218,180.000000,10.000000,270.000000,60.000000,0.000000,"East" \n "#02"};
-item6[] = {"East__01",4,218,290.000000,10.000000,380.000000,60.000000,0.000000,"East" \n "#01"};
+item6[] = {"East__01",4,4314,290.000000,10.000000,380.000000,60.000000,0.000000,"East" \n "#01"};
 item7[] = {"East__03",4,218,70.000000,10.000000,160.000000,60.000000,0.000000,"East" \n "#03"};
 item8[] = {"End",1,250,-40.000000,80.000000,50.000000,130.000000,0.000000,"End"};
 item9[] = {"Add_Equipment",2,250,-150.000000,80.000000,-60.000000,130.000000,0.000000,"Add" \n "Equipment"};
@@ -61,8 +61,8 @@ link28[] = {24,23};
 link29[] = {25,8};
 link30[] = {26,16};
 link31[] = {27,26};
-globals[] = {10.000000,1,0,0,0,640,480,1,71,6316128,1,-454.680298,462.410278,360.565552,-234.498245,1404,1031,1};
-window[] = {2,-1,-1,-1,-1,1125,275,1715,275,3,1422};
+globals[] = {10.000000,1,0,0,0,640,480,1,71,6316128,1,-454.680298,462.410278,721.937866,-438.774933,345,901,1};
+window[] = {2,-1,-1,-32000,-32000,980,130,1570,130,1,363};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -73,7 +73,6 @@ class FSM
     class Start
     {
       name = "Start";
-      itemno = 0;
       init = /*%FSM<STATEINIT""">*/"// Basic definitions" \n
        "" \n
        "BIS_MAIN = format [""<t size='1.25' align='center'>%1</t>"",localize ""STR_A3_EndGame_NewEquipment""];" \n
@@ -94,7 +93,6 @@ class FSM
         /*%FSM<LINK "West__02">*/
         class West__02
         {
-          itemno = 3;
           priority = 0.000000;
           to="Add_Equipment_1";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -108,7 +106,6 @@ class FSM
         /*%FSM<LINK "West__01">*/
         class West__01
         {
-          itemno = 4;
           priority = 0.000000;
           to="Add_Equipment_2";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -122,7 +119,6 @@ class FSM
         /*%FSM<LINK "East__03">*/
         class East__03
         {
-          itemno = 7;
           priority = 0.000000;
           to="Add_Equipment_5";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -136,7 +132,6 @@ class FSM
         /*%FSM<LINK "East__02">*/
         class East__02
         {
-          itemno = 5;
           priority = 0.000000;
           to="Add_Equipment_4";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -150,7 +145,6 @@ class FSM
         /*%FSM<LINK "East__01">*/
         class East__01
         {
-          itemno = 6;
           priority = 0.000000;
           to="Add_Equipment_3";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -164,7 +158,6 @@ class FSM
         /*%FSM<LINK "West__03">*/
         class West__03
         {
-          itemno = 2;
           priority = 0.000000;
           to="Add_Equipment";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -182,7 +175,6 @@ class FSM
     class End
     {
       name = "End";
-      itemno = 8;
       init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
@@ -194,7 +186,6 @@ class FSM
     class Add_Equipment
     {
       name = "Add_Equipment";
-      itemno = 9;
       init = /*%FSM<STATEINIT""">*/"BIS_west03_reward = true;" \n
        "" \n
        "[] spawn {" \n
@@ -267,7 +258,6 @@ class FSM
         /*%FSM<LINK "_">*/
         class _
         {
-          itemno = 25;
           priority = 0.000000;
           to="End";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -282,7 +272,6 @@ class FSM
     class Add_Equipment_1
     {
       name = "Add_Equipment_1";
-      itemno = 10;
       init = /*%FSM<STATEINIT""">*/"BIS_west02_reward = true;" \n
        "" \n
        "[] spawn {" \n
@@ -375,7 +364,6 @@ class FSM
         /*%FSM<LINK "_">*/
         class _
         {
-          itemno = 25;
           priority = 0.000000;
           to="End";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -390,7 +378,6 @@ class FSM
     class Add_Equipment_2
     {
       name = "Add_Equipment_2";
-      itemno = 11;
       init = /*%FSM<STATEINIT""">*/"BIS_west01_reward = true;" \n
        "" \n
        "[] spawn {" \n
@@ -398,17 +385,17 @@ class FSM
        "{" \n
        "	[_x," \n
        "		[" \n
-       "			""muzzle_snds_acp""," \n
-       "			""muzzle_snds_L""," \n
-       "			""muzzle_snds_H""" \n
+       "			""rhsusf_acc_eotech_552""," \n
+       "			""ACE_muzzle_mzls_L""," \n
+       "			""rhsusf_acc_rotex5_grey""" \n
        "	], true, false] call BIS_fnc_addVirtualItemCargo;" \n
        "}" \n
        "	forEach [BIS_west_holder_1, BIS_west_holder_2];" \n
        "" \n
        "// Items" \n
-       "_muzzle_snds_L = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_L' >> 'DisplayName')];" \n
-       "_muzzle_snds_acp = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_acp' >> 'DisplayName')];" \n
-       "_muzzle_snds_H = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_H' >> 'DisplayName')];" \n
+       "_rhsusf_acc_eotech_552 = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'rhsusf_acc_eotech_552' >> 'DisplayName')];" \n
+       "_ACE_muzzle_mzls_L = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'ACE_muzzle_mzls_L' >> 'DisplayName')];" \n
+       "_rhsusf_acc_rotex5_grey = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'rhsusf_acc_rotex5_grey' >> 'DisplayName')];" \n
        "" \n
        "sleep 2.5;" \n
        "" \n
@@ -421,11 +408,11 @@ class FSM
        "		BIS_BR +" \n
        "		BIS_ITEMS +" \n
        "		BIS_BR +" \n
-       "		_muzzle_snds_L +" \n
+       "		_rhsusf_acc_eotech_552 +" \n
        "		BIS_BR +" \n
-       "		_muzzle_snds_acp +" \n
+       "		_ACE_muzzle_mzls_L +" \n
        "		BIS_BR +" \n
-       "		_muzzle_snds_H" \n
+       "		_rhsusf_acc_rotex5_grey" \n
        "	),""hintSilent"",WEST,false] call BIS_fnc_MP;" \n
        "" \n
        "sleep 10;" \n
@@ -439,7 +426,6 @@ class FSM
         /*%FSM<LINK "_">*/
         class _
         {
-          itemno = 25;
           priority = 0.000000;
           to="End";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -454,7 +440,6 @@ class FSM
     class Add_Equipment_3
     {
       name = "Add_Equipment_3";
-      itemno = 12;
       init = /*%FSM<STATEINIT""">*/"BIS_east01_reward = true;" \n
        "" \n
        "[] spawn {" \n
@@ -462,15 +447,17 @@ class FSM
        "{" \n
        "	[_x," \n
        "		[" \n
-       "			""muzzle_snds_L""," \n
-       "			""muzzle_snds_H""" \n
+       "			""rhs_acc_1p63""," \n
+       "			""rhs_acc_dtk""," \n
+       "			""rhs_acc_tgpa""" \n
        "	], true, false] call BIS_fnc_addVirtualItemCargo;" \n
        "}" \n
        "	forEach [BIS_east_holder_1, BIS_east_holder_2];" \n
        "" \n
        "// Items" \n
-       "_muzzle_snds_L = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_L' >> 'DisplayName')];" \n
-       "_muzzle_snds_H = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_H' >> 'DisplayName')];" \n
+       "_rhs_acc_1p63 = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'muzzle_snds_L' >> 'DisplayName')];" \n
+       "_rhs_acc_dtk = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'rhs_acc_dtk' >> 'DisplayName')];" \n
+       "_rhs_acc_tgpa = format [""<t align='left'>%1 %2</t>"",BIS_MARK, getText (configFile >> 'CfgWeapons' >> 'rhs_acc_tgpa' >> 'DisplayName')];" \n
        "" \n
        "sleep 2.5;" \n
        "" \n
@@ -483,9 +470,11 @@ class FSM
        "		BIS_BR +" \n
        "		BIS_ITEMS +" \n
        "		BIS_BR +" \n
-       "		_muzzle_snds_L +" \n
+       "		_rhs_acc_1p63 +" \n
        "		BIS_BR +" \n
-       "		_muzzle_snds_H" \n
+       "		_rhs_acc_dtk +" \n
+       "		BIS_BR +" \n
+       "		_rhs_acc_tgpa" \n
        "	),""hintSilent"",EAST,false] call BIS_fnc_MP;" \n
        "" \n
        "sleep 10;" \n
@@ -499,7 +488,6 @@ class FSM
         /*%FSM<LINK "_">*/
         class _
         {
-          itemno = 25;
           priority = 0.000000;
           to="End";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -514,7 +502,6 @@ class FSM
     class Add_Equipment_4
     {
       name = "Add_Equipment_4";
-      itemno = 13;
       init = /*%FSM<STATEINIT""">*/"BIS_east02_reward = true;" \n
        "" \n
        "[] spawn {" \n
@@ -603,7 +590,6 @@ class FSM
         /*%FSM<LINK "_">*/
         class _
         {
-          itemno = 25;
           priority = 0.000000;
           to="End";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -618,7 +604,6 @@ class FSM
     class Add_Equipment_5
     {
       name = "Add_Equipment_5";
-      itemno = 14;
       init = /*%FSM<STATEINIT""">*/"BIS_east03_reward = true;" \n
        "" \n
        "[] spawn {" \n
@@ -695,7 +680,6 @@ class FSM
         /*%FSM<LINK "_">*/
         class _
         {
-          itemno = 25;
           priority = 0.000000;
           to="End";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
