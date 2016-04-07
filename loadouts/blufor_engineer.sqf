@@ -36,7 +36,7 @@ _this addHeadgear "rhsusf_opscore_mc_cover_pelt";
 _this addGoggles "G_Aviator";
 
 comment "Add weapons";
-_this addWeapon "rhs_weap_m4";
+_this addWeapon "rhs_weap_m4a1_carryhandle";
 _this addPrimaryWeaponItem "acc_pointer_IR";
 _this addPrimaryWeaponItem "rhsusf_acc_eotech_552";
 _this addWeapon "rhsusf_weap_m9";

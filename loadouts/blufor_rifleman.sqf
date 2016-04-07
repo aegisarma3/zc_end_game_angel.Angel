@@ -31,7 +31,7 @@ _this addHeadgear "rhsusf_opscore_mc_cover";
 _this addGoggles "rhs_googles_orange";
 
 comment "Add weapons";
-_this addWeapon "rhs_weap_m4";
+_this addWeapon "rhs_weap_m4a1_carryhandle";
 _this addPrimaryWeaponItem "acc_pointer_IR";
 _this addWeapon "rhsusf_weap_m9";
 
