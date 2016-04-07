@@ -19,12 +19,15 @@ removeGoggles _this;
 comment "Add containers";
 _this forceAddUniform "rhs_uniform_mvd_izlom";
 _this addItemToUniform "FirstAidKit";
-for "_i" from 1 to 2 do {_this addItemToUniform "rhs_VOG25";};
+for "_i" from 1 to 3 do {_this addItemToUniform "rhs_VOG25";};
 _this addItemToUniform "rhs_30Rnd_545x39_AK";
 _this addItemToUniform "rhs_mag_9x18_12_57N181S";
+_this addItemToUniform "rhs_VOG25P";
 _this addVest "rhs_6b13_6sh92_vog";
 for "_i" from 1 to 2 do {_this addItemToVest "rhs_30Rnd_545x39_AK";};
 for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_9x18_12_57N181S";};
+for "_i" from 1 to 2 do {_this addItemToVest "rhs_GRD40_White";};
+_this addItemToVest "rhs_GRD40_Red";
 _this addHeadgear "rhs_6b28_ess_bala";
 
 comment "Add weapons";
