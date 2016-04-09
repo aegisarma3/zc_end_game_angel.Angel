@@ -86,7 +86,6 @@ BIS_east03_reward = false;
 		"optic_Holosight",
 		"optic_hamr",
 		"optic_SOS",
-		"optic_nvs",
 		"acc_pointer_IR",
 		"acc_flashlight",
 		"bipod_01_F_blk",
@@ -218,7 +217,6 @@ BIS_east03_reward = false;
 	"optic_Holosight",
 	"optic_hamr",
 	"optic_SOS",
-	"optic_nvs",
 	"acc_pointer_IR",
 	"acc_flashlight",
 	"bipod_01_F_blk",
@@ -310,6 +308,3 @@ BIS_east03_reward = false;
 		"Chemlight_red"
 	], true, false] call BIS_fnc_addVirtualMagazineCargo;
 } forEach [BIS_east_holder_1, BIS_east_holder_2];
-
-// Fog
-//0 setFog [0.5, 0.05, 0];
