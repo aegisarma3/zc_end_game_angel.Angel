@@ -69,7 +69,7 @@ BIS_east03_reward = false;
 		"rhs_weap_m4",
 		"rhs_weap_m4_carryhandle",
 		"rhs_weap_m4_grip",
-		"rhs_weap_m4_m203",
+		"rhs_weap_m4a1_carryhandle_m203",
 		"rhs_weap_m4a1_grip",
 		"rhs_weap_m4a1_m320",
 		"rhs_weap_m240B",

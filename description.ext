@@ -26,7 +26,7 @@ taskManagement_drawDist  = 2000; //3D marker draw distance (default: 2000)
 
 class Params
 {
-#define DAYTIMEHOUR_DEFAULT 7
+#define DAYTIMEHOUR_DEFAULT 5
 #define WEATHER_DEFAULT  25
 #define DEBUGCONSOLE_DEFAULT   0
 
